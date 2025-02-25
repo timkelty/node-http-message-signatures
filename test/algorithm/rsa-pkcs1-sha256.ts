@@ -1,8 +1,8 @@
-import { createSign, generateKeyPair, publicDecrypt } from 'crypto';
+import { createSign, generateKeyPair, publicDecrypt, constants } from 'crypto';
 import { promisify } from 'util';
 import { createSigner, createVerifier } from '../../src';
 import { expect } from 'chai';
-import { RSA_PKCS1_PADDING } from 'constants';
+const { RSA_PKCS1_PADDING } = constants;
 
 describe('rsa-v1_5-sha256', () => {
     let rsaKeyPair: { publicKey: string, privateKey: string };

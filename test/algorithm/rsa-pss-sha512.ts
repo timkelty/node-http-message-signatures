@@ -1,10 +1,10 @@
-import { generateKeyPair, sign, verify } from 'crypto';
+import { generateKeyPair, sign, verify, constants } from 'crypto';
 import { promisify } from 'util';
 import { createSigner, createVerifier } from '../../src';
 import { expect } from 'chai';
-import { RSA_PKCS1_PSS_PADDING } from 'constants';
 import { readFile } from 'fs';
 import { join } from 'path';
+const { RSA_PKCS1_PSS_PADDING } = constants;
 
 describe('rsa-pss-sha512', () => {
     describe('internal tests', () => {

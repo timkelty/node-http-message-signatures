@@ -12,10 +12,11 @@ import {
     sign,
     verify,
     KeyObject,
+    constants,
 } from 'crypto';
-import { RSA_PKCS1_PADDING, RSA_PKCS1_PSS_PADDING } from 'constants';
 import { SigningKey, Algorithm, Verifier } from '../types';
 import { UnknownAlgorithmError } from '../errors';
+const { RSA_PKCS1_PADDING, RSA_PKCS1_PSS_PADDING } = constants;
 
 /**
  * A helper method for easier consumption of the library.
